@@ -81,7 +81,7 @@ class PredictPostings:
             decorator.existing_entries = existing_entries
 
             # read the importer's `extract`ed entries
-            logger.debug(f"About to call the importer's extract function to receive entries to be imported...")
+            logger.debug("About to call the importer's extract function to receive entries to be imported...")
             if 'existing_entries' in inspect.signature(original_extract_function).parameters:
                 decorator.imported_transactions = original_extract_function(self, file, existing_entries)
             else:
